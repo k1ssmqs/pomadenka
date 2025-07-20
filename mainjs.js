@@ -1,16 +1,16 @@
       const products = [
-          { name: 'Блиск для губ', price: 330 },
-          { name: 'База під макіяж', price: 185 },
-          { name: 'Тональна основа Dior', price: 1900 },
-          { name: 'Пудра компактна', price: 400 },
-          { name: 'Туш для вій', price: 210 },
-          { name: 'Олівець для брів', price: 130 },
-          { name: 'Хайлайтер', price: 275 },
-          { name: 'Бальзам для губ', price: 150 },
-          { name: 'Рум’яна', price: 295 },
-          { name: 'Коректор', price: 225 },
-          { name: 'Праймер для повік', price: 165 },
-          { name: 'Пензлик для пудри', price: 199 }
+          { name: 'Блиск для губ', price: 330, img: 'blisk.png' },
+          { name: 'База під макіяж', price: 185, img: 'base.png' },
+          { name: 'Тональна основа Dior', price: 1900, img: 'tonalka.png' },
+          { name: 'Пудра компактна', price: 400, img: 'pudra.png' },
+          { name: 'Туш для вій', price: 210, img: 'tush.png' },
+          { name: 'Олівець для брів', price: 130, img: 'pensil.png' },
+          { name: 'Хайлайтер', price: 275, img: 'hailaiter.png' },
+          { name: 'Бальзам для губ', price: 150, img: 'balsam.png' },
+          { name: 'Рум’яна', price: 295, img: 'rumyana.png' },
+          { name: 'Коректор', price: 225, img: 'corector.png' },
+          { name: 'Праймер для повік', price: 165, img: 'praimer.png' },
+          { name: 'Пензлик для пудри', price: 199, img: 'penslik.png' }
         ];
 
         const productsContainer = document.querySelector('.products');
@@ -18,7 +18,7 @@
           const div = document.createElement('div');
           div.className = 'product';
           div.innerHTML = `
-            <img src="https://via.placeholder.com/150?text=Продукт+${index + 1}" alt="${product.name}" />
+            <img src="${product.img}" alt="${product.name}" />
             <h3>${product.name}</h3>
             <p>${product.price} грн</p>
             <button onclick="addToCart('${product.name}', ${product.price})">Кошик</button>
